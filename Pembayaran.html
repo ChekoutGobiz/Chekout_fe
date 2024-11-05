@@ -4,56 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pembayaran</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <header class="flex justify-between items-center pb-4 border-b">
-        <h1 class="text-2xl font-bold text-orange-500">Checkout</h1>
-        <img src="img/logo kuyjajan.jpg" alt="Logo" class="h-8">
-    </header>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full">
+        <h2 class="text-xl font-bold text-center text-gray-800 mb-4">Pembayaran</h2>
 
-<div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 mt-10">
-    <h2 class="text-xl font-bold mb-4">Pembayaran</h2>
+        <div class="mb-4">
+            <p class="text-gray-700">Total Pembayaran: <span class="text-red-600 font-semibold">Rp140.000</span></p>
+            <p class="text-gray-700">Bayar Dalam: <span class="text-red-600 font-semibold">23 jam 58 menit 47 detik</span></p>
+            <p class="text-gray-600">Jatuh tempo: <strong>05 Nov 2024, 21:28</strong></p>
+        </div>
 
-    <div class="flex justify-between mb-4">
-        <p class="font-semibold">Total Pembayaran</p>
-        <p class="text-red-500 font-bold">Rp140.000</p>
+        <hr class="my-4">
+
+        <div class="flex flex-col items-center mb-4 text-center">
+            <img src="logo-seabank.png" alt="SeaBank Logo" class="w-8 h-8 mb-2">
+            <p class="text-lg font-semibold text-gray-800">SeaBank</p>
+            <p class="text-gray-800">Nomor Rekening: <strong>781 0895 4014 9808 1</strong> <span class="text-blue-500 font-semibold cursor-pointer">[SALIN]</span></p>
+            <p class="text-sm text-gray-500 mt-2">Proses verifikasi kurang dari 10 menit setelah pembayaran berhasil.<br>Menerima transfer dari semua Bank termasuk Bank Syariah.</p>
+        </div>
+
+        <hr class="my-4">
+
+        <div class="text-gray-800">
+            <h3 class="text-lg font-semibold mb-2">Transfer Bank (Panduan Manual di Aplikasi SeaBank)</h3>
+            <ol class="list-decimal list-inside space-y-2">
+                <li>Buka aplikasi <strong>SeaBank</strong> dan login ke akun Anda.</li>
+                <li>Pilih menu <strong>Virtual Account Transfer</strong>.</li>
+                <li>Pilih <strong>Bank: SeaBank</strong>.</li>
+                <li>Masukkan nomor rekening <strong>781 0895 4014 9808 1</strong> di kolom rekening, lalu klik <strong>Selanjutnya</strong>.</li>
+                <li>Pastikan jumlah pembayaran sudah benar, lalu klik <strong>Selanjutnya</strong>.</li>
+                <li>Periksa semua informasi yang muncul di layar, lalu konfirmasi dengan memasukkan <strong>PIN</strong> Anda.</li>
+                <li><strong>Selesai!</strong> Transaksi akan diproses oleh SeaBank. Silakan kembali ke aplikasi Shopee untuk melihat status transaksi.</li>
+            </ol>
+        </div>
     </div>
-
-    <div class="flex justify-between mb-6">
-        <p class="font-semibold">Bayar Dalam</p>
-        <p class="text-red-500 font-bold">23 jam 58 menit 47 detik<br><span class="text-sm text-gray-500">Jatuh tempo 05 Nov 2024, 21:28</span></p>
-    </div>
-
-    <div class="flex items-center mb-4">
-        <img src="https://via.placeholder.com/32" alt="SeaBank Logo" class="w-8 h-8 mr-2">
-        <p class="font-semibold">SeaBank</p>
-    </div>
-
-    <div class="mb-4">
-        <p class="text-gray-600">No. Rekening:</p>
-        <p class="text-lg text-red-500 font-bold mb-1">781 0895 4014 9808 1 <span class="text-blue-500 cursor-pointer">SALIN</span></p>
-        <p class="text-sm text-green-500">Proses verifikasi kurang dari 10 menit setelah pembayaran berhasil</p>
-        <p class="text-sm text-gray-500">Menerima transfer dari semua Bank termasuk Bank Syariah</p>
-    </div>
-
-    <div class="border-t border-gray-200 mt-4 pt-4">
-        <p class="font-semibold mb-4">Transfer Bank (Buka App SeaBank Secara Manual)</p>
-        <ol class="list-decimal list-inside text-sm text-gray-600 space-y-2">
-            <li>Buka aplikasi SeaBank dan log in ke akun Anda</li>
-            <li>Klik <span class="font-semibold">Virtual Account Transfer</span></li>
-            <li>Pilih Bank: <span class="font-semibold">SeaBank</span></li>
-            <li>Masukkan <span class="font-semibold">781 0895401498081</span> pada Informasi Rekening, klik <span class="font-semibold">Selanjutnya</span></li>
-            <li>Pastikan jumlah pembayaran sudah benar dan klik <span class="font-semibold">Selanjutnya</span></li>
-            <li>Periksa semua informasi yang ada di layar, kemudian klik <span class="font-semibold">Konfirmasi</span> dan masukkan <span class="font-semibold">PIN</span></li>
-            <li>Transaksi akan diproses di aplikasi SeaBank. Setelah transaksi berhasil, silakan kembali ke aplikasi Shopee untuk cek status transaksi.</li>
-        </ol>
-    </div>
-
-    <div class="mt-6">
-        <button class="w-full bg-orange-500 text-white font-bold py-2 rounded-lg hover:bg-orange-600">OK</button>
-    </div>
-</div>
-
 </body>
 </html>
