@@ -1,124 +1,47 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pembayaran</title>
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full">
-      <h2 class="text-xl font-bold text-center text-gray-800 mb-4">
-        Pembayaran
-      </h2>
+        <h2 class="text-xl font-bold text-center text-gray-800 mb-4">Pembayaran</h2>
 
-      <div class="mb-4">
-        <p class="text-gray-700">
-          Total Pembayaran:
-          <span class="text-red-600 font-semibold">Rp140.000</span>
-        </p>
-        <p class="text-gray-700">
-          Bayar Dalam:
-          <span id="countdown" class="text-red-600 font-semibold"
-            >5 jam 0 menit 0 detik</span
-          >
-        </p>
-        <p class="text-gray-600">
-          Jatuh tempo: <strong id="due-date">08 Nov 2024, 21:28</strong>
-        </p>
-      </div>
+        <div class="mb-4">
+            <p class="text-gray-700">Total Pembayaran: <span class="text-red-600 font-semibold">Rp140.000</span></p>
+            <p class="text-gray-700">Bayar Dalam: <span id="countdown" class="text-red-600 font-semibold">5 jam 0 menit 0 detik</span></p>
+            <p class="text-gray-600">Jatuh tempo: <strong id="due-date">08 Nov 2024, 21:28</strong></p>
+        </div>
 
-      <hr class="my-4" />
+        <hr class="my-4">
 
-      <div class="flex flex-col items-center mb-4 text-center">
-        <img src="logo-seabank.png" alt="SeaBank Logo" class="w-8 h-8 mb-2" />
-        <p class="text-lg font-semibold text-gray-800">SeaBank</p>
-        <p class="text-gray-800">
-          Nomor Rekening: <strong>781 0895 4014 9808 1</strong>
-          <span class="text-blue-500 font-semibold cursor-pointer"
-            >[SALIN]</span
-          >
-        </p>
-        <p class="text-sm text-gray-500 mt-2">
-          Proses verifikasi kurang dari 10 menit setelah pembayaran berhasil.<br />Menerima
-          transfer dari semua Bank termasuk Bank Syariah.
-        </p>
-      </div>
+        <div class="flex flex-col items-center mb-4 text-center">
+            <img src="logo-seabank.png" alt="SeaBank Logo" class="w-8 h-8 mb-2">
+            <p class="text-lg font-semibold text-gray-800">SeaBank</p>
+            <p class="text-gray-800">Nomor Rekening: <strong>781 0895 4014 9808 1</strong> <span class="text-blue-500 font-semibold cursor-pointer">[SALIN]</span></p>
+            <p class="text-sm text-gray-500 mt-2">Proses verifikasi kurang dari 10 menit setelah pembayaran berhasil.<br>Menerima transfer dari semua Bank termasuk Bank Syariah.</p>
+        </div>
 
-      <hr class="my-4" />
+        <hr class="my-4">
 
-      <div class="text-gray-800">
-        <h3 class="text-lg font-semibold mb-2">
-          Transfer Bank (Panduan Manual di Aplikasi SeaBank)
-        </h3>
-        <ol class="list-decimal list-inside space-y-2">
-          <li>
-            Buka aplikasi <strong>SeaBank</strong> dan login ke akun Anda.
-          </li>
-          <li>Pilih menu <strong>Virtual Account Transfer</strong>.</li>
-          <li>Pilih <strong>Bank: SeaBank</strong>.</li>
-          <li>
-            Masukkan nomor rekening <strong>781 0895 4014 9808 1</strong> di
-            kolom rekening, lalu klik <strong>Selanjutnya</strong>.
-          </li>
-          <li>
-            Pastikan jumlah pembayaran sudah benar, lalu klik
-            <strong>Selanjutnya</strong>.
-          </li>
-          <li>
-            Periksa semua informasi yang muncul di layar, lalu konfirmasi dengan
-            memasukkan <strong>PIN</strong> Anda.
-          </li>
-          <li>
-            <strong>Selesai!</strong> Transaksi akan diproses oleh SeaBank.
-            Silakan kembali ke aplikasi Shopee untuk melihat status transaksi.
-          </li>
-        </ol>
-      </div>
+        <div class="text-gray-800">
+            <h3 class="text-lg font-semibold mb-2">Transfer Bank (Panduan Manual di Aplikasi SeaBank)</h3>
+            <ol class="list-decimal list-inside space-y-2">
+                <li>Buka aplikasi <strong>SeaBank</strong> dan login ke akun Anda.</li>
+                <li>Pilih menu <strong>Virtual Account Transfer</strong>.</li>
+                <li>Pilih <strong>Bank: SeaBank</strong>.</li>
+                <li>Masukkan nomor rekening <strong>781 0895 4014 9808 1</strong> di kolom rekening, lalu klik <strong>Selanjutnya</strong>.</li>
+                <li>Pastikan jumlah pembayaran sudah benar, lalu klik <strong>Selanjutnya</strong>.</li>
+                <li>Periksa semua informasi yang muncul di layar, lalu konfirmasi dengan memasukkan <strong>PIN</strong> Anda.</li>
+                <li><strong>Selesai!</strong> Transaksi akan diproses oleh SeaBank. Silakan kembali ke aplikasi Shopee untuk melihat status transaksi.</li>
+            </ol>
+        </div>
     </div>
-
-    <script>
-      // Set waktu jatuh tempo awal (5 jam dari sekarang)
-      const endTime = new Date().getTime() + 5 * 60 * 60 * 1000;
-
-      function updateCountdown() {
-        const now = new Date().getTime();
-        const remainingTime = endTime - now;
-
-        if (remainingTime > 0) {
-          const hours = Math.floor(
-            (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          );
-          const minutes = Math.floor(
-            (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-          );
-          const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-
-          document.getElementById(
-            "countdown"
-          ).textContent = `${hours} jam ${minutes} menit ${seconds} detik`;
-        } else {
-          document.getElementById("countdown").textContent = "Waktu Habis";
-          clearInterval(timer); // Hentikan countdown
-        }
-      }
-
-      // Jalankan countdown setiap detik
-      const timer = setInterval(updateCountdown, 1000);
-
-      // Tentukan waktu jatuh tempo
-      const dueDate = new Date(endTime);
-      const options = {
-        day: "2-digit",
-        month: "short",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      };
-      document.getElementById("due-date").textContent = dueDate.toLocaleString(
-        "id-ID",
-        options
-      );
-    </script>
-  </body>
+    
+     <!-- Mengimpor Script Modul -->
+     <script type="module" src="countdown.js"></script>
+</body>
 </html>
