@@ -102,40 +102,64 @@
         <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">Bayar Tunai di Mitra/Agen</button>
     </div>
     <h3 class="text-md font-semibold mt-4 mb-2">Pilih Bank</h3>
-    <div class="flex flex-col space-y-2">
-        <label class="flex items-center">
-            <input type="radio" name="bank" value="seabank" class="mr-2">
-            <span class="text-gray-700">SeaBank <span class="text-sm text-gray-500">Bebas Biaya Penanganan</span></span>
+    <div class="space-y-4">
+        <!-- SeaBank -->
+        <label class="flex items-center space-x-4 cursor-pointer">
+          <input type="radio" name="bank" value="seabank" class="hidden peer" />
+          <img src="img/seab.jpeg" alt="SeaBank" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
+          <span class="text-gray-700">SeaBank</span>
         </label>
-        <label class="flex items-center">
-            <input type="radio" name="bank" value="bca" class="mr-2">
-            <span class="text-gray-700">Bank BCA</span>
+      
+        <!-- Bank BCA -->
+        <label class="flex items-center space-x-4 cursor-pointer">
+          <input type="radio" name="bank" value="bca" class="hidden peer" />
+          <img src="img/bca.png" alt ="Bank BCA" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
+          <span class="text-gray-700">Bank BCA</span>
         </label>
-        <label class="flex items-center">
-            <input type="radio" name="bank" value="mandiri" class="mr-2">
-            <span class="text-gray-700">Bank Mandiri</span>
+      
+        <!-- Bank Mandiri -->
+        <label class="flex items-center space-x-4 cursor-pointer">
+          <input type="radio" name="bank" value="mandiri" class="hidden peer" />
+          <img src="img/download.png" alt="Bank Mandiri" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
+          <span class="text-gray-700">Bank Mandiri</span>
         </label>
-        <label class="flex items-center">
-            <input type="radio" name="bank" value="bni" class="mr-2">
-            <span class="text-gray-700">Bank BNI</span>
+      
+        <!-- Bank BNI -->
+        <label class="flex items-center space-x-4 cursor-pointer">
+          <input type="radio" name="bank" value="bni" class="hidden peer" />
+          <img src="img/bni.png" alt="Bank BNI" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
+          <span class="text-gray-700">Bank BNI</span>
         </label>
-        <label class="flex items-center">
-            <input type="radio" name="bank" value="bri" class="mr-2" checked>
-            <span class="text-gray-700">Bank BRI</span>
+      
+        <!-- Bank BRI -->
+        <label class="flex items-center space-x-4 cursor-pointer">
+          <input type="radio" name="bank" value="bri" class="hidden peer" checked />
+          <img src="img/bri.jpeg" alt="Bank BRI" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
+          <span class="text-gray-700">Bank BRI</span>
         </label>
-        <label class="flex items-center">
-            <input type="radio" name="bank" value="bsi" class="mr-2">
-            <span class="text-gray-700">Bank Syariah Indonesia (BSI)</span>
+      
+        <!-- Bank Syariah Indonesia (BSI) -->
+        <label class="flex items-center space-x-4 cursor-pointer">
+          <input type="radio" name="bank" value="bsi" class="hidden peer" />
+          <img src="img/bsi.png" alt="Bank Syariah Indonesia" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
+          <span class="text-gray-700">Bank Syariah Indonesia (BSI)</span>
         </label>
-        <label class="flex items-center">
-            <input type="radio" name="bank" value="permata" class="mr-2">
-            <span class="text-gray-700">Bank Permata</span>
+      
+        <!-- Bank Permata -->
+        <label class="flex items-center space-x-4 cursor-pointer">
+          <input type="radio" name="bank" value="permata" class="hidden peer" />
+          <img src="img/permata.png" alt="Bank Permata" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
+          <span class="text-gray-700">Bank Permata</span>
         </label>
-        <label class="flex items-center">
-            <input type="radio" name="bank" value="lainnya" class="mr-2">
-            <span class="text-gray-700">Bank lainnya <span class="text-sm text-gray-500">Terdapat perubahan nama bank penerima dari Bank Mandiri ke Bank SeaBank.</span></span>
+      
+        <!-- Bank lainnya -->
+        <label class="flex items-center space-x-4 cursor-pointer">
+          <input type="radio" name="bank" value="lainnya" class="hidden peer" />
+          <img src="img/bjb.png" alt="Bank Lainnya" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
+          <span class="text-gray-700">Bank BJB</span>
         </label>
-    </div>
+      </div>
+      
 
     <!-- Checkout Button -->
 
