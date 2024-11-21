@@ -138,7 +138,7 @@
         <section class="my-6">
             <div class="flex justify-between items-center mb-4">
                 <span class="font-semibold text-gray-600">Subtotal</span>
-                <p>Rp 105.000</p>
+                <p id="subtotal">Rp 105.000</p>
             </div>
             <div class="flex justify-between items-center mb-4">
                 <span class="font-semibold text-gray-600">Ongkos Kirim</span>
@@ -146,7 +146,7 @@
             </div>
             <div class="flex justify-between items-center mb-6">
                 <span class="text-xl font-bold">Total</span>
-                <p class="text-xl font-bold text-green-500">Rp 125.000</p>
+                <p id="total" class="text-xl font-bold text-green-500">Rp 125.000</p>
             </div>
             <button class="mt-8 w-full bg-blue-500 text-white px-6 py-3 rounded-lg text-xl">Lanjutkan ke Pembayaran</button>
         </section>
@@ -158,11 +158,33 @@
             allButtons.forEach(btn => btn.classList.remove('bg-blue-500', 'text-white'));
             button.classList.add('bg-blue-500', 'text-white');
 
-            if (button.id === "transferBankBtn") {
-                document.getElementById("bankOptions").classList.remove("hidden");
+            const bankOptions = document.getElementById("bankOptions");
+            const transferBankBtn = document.getElementById("transferBankBtn");
+
+            let additionalFee = 0;
+
+            if (button.textContent === "Transfer Bank") {
+                bankOptions.classList.remove('hidden'); // Menampilkan pilihan bank
             } else {
-                document.getElementById("bankOptions").classList.add("hidden");
+                bankOptions.classList.add('hidden'); // Menyembunyikan pilihan bank
             }
+
+            if (button.textContent === "Transfer Bank" || button.textContent === "COD" || button.textContent === "COD - Cek Dulu") {
+                additionalFee = 2500;
+            }
+
+            updateTotal(additionalFee);
+        }
+
+        function updateTotal(additionalFee) {
+            const productTotal = 105000; // Subtotal produk tanpa biaya admin
+            const shippingCost = 20000;  // Ongkos kirim
+            const newSubtotal = productTotal + additionalFee;
+            const newTotal = newSubtotal + shippingCost;
+
+            // Update tampilan
+            document.getElementById("subtotal").textContent = `Rp ${newSubtotal.toLocaleString()}`;
+            document.getElementById("total").textContent = `Rp ${newTotal.toLocaleString()}`;
         }
 
         function selectBank(label) {
