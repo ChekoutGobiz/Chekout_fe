@@ -8,16 +8,16 @@
 </head>
 <body class="bg-green-100 font-sans antialiased">
     <!-- Container -->
-    <div class="max-w-4xl mx-auto p-6 bg-white shadow-lg mt-10 rounded-lg">
+    <div class="max-w-3xl mx-auto p-6 bg-white shadow-lg mt-6 rounded-lg">
         <!-- Header -->
         <header class="flex justify-between items-center pb-4 border-b">
-            <h1 class="text-2xl font-bold text-orange-500">Checkout</h1>
-            <img src="img/logo kuyjajan.jpg" alt="Logo" class="h-8">
+            <h1 class="text-3xl font-bold text-orange-500">Checkout</h1>
+            <img src="img/logo kuyjajan.jpg" alt="Logo" class="h-10">
         </header>
 
         <!-- Shipping Address -->
         <section class="my-6">
-            <h2 class="text-lg font-bold mb-2">Alamat Pengiriman</h2>
+            <h2 class="text-xl font-bold mb-4">Alamat Pengiriman</h2>
             <p class="text-gray-600">Nama: Siti Fauah</p>
             <p class="text-gray-600">Jalan XYZ, Kota ABC, Provinsi DEF, 12345</p>
             <a href="#" class="text-blue-500 text-sm">Ubah alamat pengiriman</a>
@@ -25,13 +25,13 @@
 
         <!-- Ordered Products Summary -->
         <section class="my-6">
-            <h2 class="text-lg font-bold mb-2">Produk Dipesan</h2>
+            <h2 class="text-xl font-bold mb-4">Produk Dipesan</h2>
             <div class="bg-gray-100 rounded-lg p-4">
                 <div class="flex justify-between items-center mb-4">
                     <div class="flex items-center">
                         <img src="img/ayambetutu.webp" alt="Ayam Betutu" class="w-16 h-16 mr-4 rounded-lg">
                         <div>
-                            <p class="font-semibold">Ayam Betutu</p>
+                            <p class="font-semibold text-lg">Ayam Betutu</p>
                             <p class="text-sm text-gray-500">Pedas</p>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                     <div class="flex items-center">
                         <img src="img/batagor.png" alt="Batagor" class="w-16 h-16 mr-4 rounded-lg">
                         <div>
-                            <p class="font-semibold">Batagor</p>
+                            <p class="font-semibold text-lg">Batagor</p>
                             <p class="text-sm text-gray-500">Tidak Pedas</p>
                         </div>
                     </div>
@@ -53,11 +53,11 @@
                         <p>Jumlah: 2</p>
                     </div>
                 </div>
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center mb-4">
                     <div class="flex items-center">
-                        <img src="img/tehtalua.jpg"Teh Talua" class="w-16 h-16 mr-4 rounded-lg">
+                        <img src="img/tehtalua.jpg" alt="Teh Talua" class="w-16 h-16 mr-4 rounded-lg">
                         <div>
-                            <p class="font-semibold">Teh Talua</p>
+                            <p class="font-semibold text-lg">Teh Talua</p>
                             <p class="text-sm text-gray-500">Pakai Gula</p>
                         </div>
                     </div>
@@ -68,134 +68,108 @@
                 </div>
             </div>
         </section>
-        
 
         <!-- Voucher and Shipping Cost -->
         <section class="my-6">
             <div class="flex justify-between items-center mb-4">
                 <label class="font-semibold text-gray-600">Voucher</label>
-                <input type="text" placeholder="Masukkan kode voucher" class="border rounded p-2 w-1/2">
+                <input type="text" placeholder="Masukkan kode voucher" class="border rounded p-3 w-1/2">
                 <button class="bg-green-500 text-white px-4 py-2 rounded">Gunakan</button>
             </div>
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center mb-4">
                 <span class="font-semibold text-gray-600">Ongkos Kirim</span>
                 <p>Rp 20.000</p>
             </div>
         </section>
 
         <!-- Payment Methods -->
-       <!-- Payment Methods -->
-<section class="my-6">
-    <h2 class="text-lg font-bold mb-2">Metode Pembayaran</h2>
-    <div id="paymentMethods" class="flex flex-wrap gap-2 mb-4">
-        <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">KuyJajanPay (Rp1.700.000)</button>
-        <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">COD</button>
-        <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">COD - Cek Dulu</button>
-        <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">Transfer Bank</button>
-        <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">Kartu Kredit/Debit</button>
-        <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">Cicilan Kartu Kredit</button>
-    </div>
-
-    <div class="flex flex-wrap gap-2 mb-4">
-        <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">BRI Direct Debit</button>
-        <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">BCA OneKlik</button>
-        <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">Bayar Tunai di Mitra/Agen</button>
-    </div>
-    <h3 class="text-md font-semibold mt-4 mb-2">Pilih Bank</h3>
-    <div class="space-y-4">
-        <!-- SeaBank -->
-        <label class="flex items-center space-x-4 cursor-pointer">
-          <input type="radio" name="bank" value="seabank" class="hidden peer" />
-          <img src="img/seab.jpeg" alt="SeaBank" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
-          <span class="text-gray-700">SeaBank</span>
-        </label>
-      
-        <!-- Bank BCA -->
-        <label class="flex items-center space-x-4 cursor-pointer">
-          <input type="radio" name="bank" value="bca" class="hidden peer" />
-          <img src="img/bca.png" alt ="Bank BCA" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
-          <span class="text-gray-700">Bank BCA</span>
-        </label>
-      
-        <!-- Bank Mandiri -->
-        <label class="flex items-center space-x-4 cursor-pointer">
-          <input type="radio" name="bank" value="mandiri" class="hidden peer" />
-          <img src="img/download.png" alt="Bank Mandiri" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
-          <span class="text-gray-700">Bank Mandiri</span>
-        </label>
-      
-        <!-- Bank BNI -->
-        <label class="flex items-center space-x-4 cursor-pointer">
-          <input type="radio" name="bank" value="bni" class="hidden peer" />
-          <img src="img/bni.png" alt="Bank BNI" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
-          <span class="text-gray-700">Bank BNI</span>
-        </label>
-      
-        <!-- Bank BRI -->
-        <label class="flex items-center space-x-4 cursor-pointer">
-          <input type="radio" name="bank" value="bri" class="hidden peer" checked />
-          <img src="img/bri.jpeg" alt="Bank BRI" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
-          <span class="text-gray-700">Bank BRI</span>
-        </label>
-      
-        <!-- Bank Syariah Indonesia (BSI) -->
-        <label class="flex items-center space-x-4 cursor-pointer">
-          <input type="radio" name="bank" value="bsi" class="hidden peer" />
-          <img src="img/bsi.png" alt="Bank Syariah Indonesia" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
-          <span class="text-gray-700">Bank Syariah Indonesia (BSI)</span>
-        </label>
-      
-        <!-- Bank Permata -->
-        <label class="flex items-center space-x-4 cursor-pointer">
-          <input type="radio" name="bank" value="permata" class="hidden peer" />
-          <img src="img/permata.png" alt="Bank Permata" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
-          <span class="text-gray-700">Bank Permata</span>
-        </label>
-      
-        <!-- Bank lainnya -->
-        <label class="flex items-center space-x-4 cursor-pointer">
-          <input type="radio" name="bank" value="lainnya" class="hidden peer" />
-          <img src="img/bjb.png" alt="Bank Lainnya" class="w-10 h-10 rounded-md border-2 border-transparent peer-checked:border-green-500" />
-          <span class="text-gray-700">Bank BJB</span>
-        </label>
-      </div>
-      
-
-    <!-- Checkout Button -->
-
-</section>
-
-<script>
-    function selectPaymentMethod(button) {
-        // Menghapus class aktif dari semua tombol
-        document.querySelectorAll('.payment-button').forEach(btn => {
-            btn.classList.remove('bg-red-500', 'text-white', 'border-red-500');
-            btn.classList.add('bg-gray-100', 'text-gray-700', 'border-gray-300');
-        });
-        
-        // Menambahkan class aktif ke tombol yang diklik
-        button.classList.remove('bg-gray-100', 'text-gray-700', 'border-gray-300');
-        button.classList.add('bg-red-500', 'text-white', 'border-red-500');
-    }
-</script>
-
-
-        <!-- Summary and Checkout -->
         <section class="my-6">
-            <div class="flex justify-between items-center border-t pt-4">
-                <p class="text-lg font-semibold">Total Pembayaran</p>
-                <p class="text-2xl font-bold text-green-500">Rp 140.000</p>
+            <h2 class="text-xl font-bold mb-4">Metode Pembayaran</h2>
+            <div id="paymentMethods" class="flex flex-wrap gap-3 mb-4">
+                <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">KuyJajanPay (Rp1.700.000)</button>
+                <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">COD</button>
+                <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">COD - Cek Dulu</button>
+                <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300" id="transferBankBtn">Transfer Bank</button>
+                <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">Kartu Kredit/Debit</button>
+                <button onclick="selectPaymentMethod(this)" class="payment-button bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">Cicilan Kartu Kredit</button>
             </div>
-            <button class="w-full bg-orange-500 text-white p-3 rounded mt-4 font-semibold">Buat Pesanan</button>
+
+            <!-- Hidden Bank Options -->
+            <div id="bankOptions" class="hidden space-y-4 mb-4">
+                <label onclick="selectBank(this)" class="flex items-center space-x-4 cursor-pointer bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">
+                    <input type="radio" name="bank" value="seabank" class="hidden" />
+                    <img src="img/seab.jpeg" alt="SeaBank" class="w-10 h-10 rounded-md border-2 border-transparent" />
+                    <span>SeaBank</span>
+                </label>
+                <label onclick="selectBank(this)" class="flex items-center space-x-4 cursor-pointer bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">
+                    <input type="radio" name="bank" value="bca" class="hidden" />
+                    <img src="img/bca.png" alt="Bank BCA" class="w-10 h-10 rounded-md border-2 border-transparent" />
+                    <span>Bank BCA</span>
+                </label>
+                <label onclick="selectBank(this)" class="flex items-center space-x-4 cursor-pointer bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">
+                    <input type="radio" name="bank" value="mandiri" class="hidden" />
+                    <img src="img/download.png" alt="Bank Mandiri" class="w-10 h-10 rounded-md border-2 border-transparent" />
+                    <span>Bank Mandiri</span>
+                </label>
+                <label onclick="selectBank(this)" class="flex items-center space-x-4 cursor-pointer bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">
+                    <input type="radio" name="bank" value="bni" class="hidden" />
+                    <img src="img/bni.png" alt="Bank BNI" class="w-10 h-10 rounded-md border-2 border-transparent" />
+                    <span>Bank BNI</span>
+                </label>
+                <label onclick="selectBank(this)" class="flex items-center space-x-4 cursor-pointer bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">
+                    <input type="radio" name="bank" value="bri" class="hidden" />
+                    <img src="img/bsi.png" alt="Bank BRI" class="w-10 h-10 rounded-md border-2 border-transparent" />
+                    <span>Bank BSI</span>
+                </label>
+                <label onclick="selectBank(this)" class="flex items-center space-x-4 cursor-pointer bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">
+                    <input type="radio" name="bank" value="bri" class="hidden" />
+                    <img src="img/permata.png" alt="Bank BRI" class="w-10 h-10 rounded-md border-2 border-transparent" />
+                    <span>Bank Permata</span>
+                </label>
+                <label onclick="selectBank(this)" class="flex items-center space-x-4 cursor-pointer bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300">
+                    <input type="radio" name="bank" value="bri" class="hidden" />
+                    <img src="img/bjb.png" alt="Bank BRI" class="w-10 h-10 rounded-md border-2 border-transparent" />
+                    <span>Bank BJB</span>
+                </label>
+            </div>
         </section>
-        <div class="my-6">
-            <a href="Pembayaran.html">
-                <button class="w-full bg-orange-500 hover:bg-orange-600 text-gray-800 text-lg font-semibold py-3 rounded">
-                    Buat Pesanan
-                </button>
-            </a>            
-        </div>
+
+        <!-- Summary and Confirm -->
+        <section class="my-6">
+            <div class="flex justify-between items-center mb-4">
+                <span class="font-semibold text-gray-600">Subtotal</span>
+                <p>Rp 105.000</p>
+            </div>
+            <div class="flex justify-between items-center mb-4">
+                <span class="font-semibold text-gray-600">Ongkos Kirim</span>
+                <p>Rp 20.000</p>
+            </div>
+            <div class="flex justify-between items-center mb-6">
+                <span class="text-xl font-bold">Total</span>
+                <p class="text-xl font-bold text-green-500">Rp 125.000</p>
+            </div>
+            <button class="mt-8 w-full bg-blue-500 text-white px-6 py-3 rounded-lg text-xl">Lanjutkan ke Pembayaran</button>
+        </section>
     </div>
-    
+
+    <script>
+        function selectPaymentMethod(button) {
+            const allButtons = document.querySelectorAll('.payment-button');
+            allButtons.forEach(btn => btn.classList.remove('bg-blue-500', 'text-white'));
+            button.classList.add('bg-blue-500', 'text-white');
+
+            if (button.id === "transferBankBtn") {
+                document.getElementById("bankOptions").classList.remove("hidden");
+            } else {
+                document.getElementById("bankOptions").classList.add("hidden");
+            }
+        }
+
+        function selectBank(label) {
+            const allLabels = document.querySelectorAll('label');
+            allLabels.forEach(lbl => lbl.classList.remove('bg-blue-100', 'border-blue-300'));
+            label.classList.add('bg-blue-100', 'border-blue-300');
+        }
+    </script>
 </body>
 </html>
