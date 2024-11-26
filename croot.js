@@ -1,3 +1,9 @@
+// Import redirect function dari library eksternal
+import { redirect } from "https://cdn.jsdelivr.net/gh/jscroot/url@0.0.2/croot.js";
+
+// Redirect ke halaman lain
+redirect("./base");
+
 // Fungsi untuk memperbarui konten elemen berdasarkan ID
 export function setInner(id, content) {
     const element = document.getElementById(id);
@@ -25,3 +31,16 @@ export function createElement(tag, attributes = {}) {
 
     return element;
 }
+
+// Contoh penggunaan `setInner`
+setInner("exampleID", "Ini adalah konten baru!");
+
+// Contoh penggunaan `createElement`
+const newDiv = createElement("div", {
+    id: "newDivID",
+    class: "new-class",
+    textContent: "Hello, World!"
+});
+
+// Menambahkan elemen ke dalam body sebagai contoh
+document.body.appendChild(newDiv);
